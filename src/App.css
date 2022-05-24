@@ -87,7 +87,7 @@
 .nav__links-wrap {
     display: flex;
     align-items: center;
-    width: 30%;
+    width: 40%;
     justify-content: space-between;
 }
 
@@ -232,7 +232,7 @@
 }
 
 .ant-collapse-content-box p, .wizards__paragrapg, .info__item-desc, .wizards__btn,
-.footer__address-link, .footer p, .footer__number-link, .footer__nav-link  {
+.footer__address-link, .footer p, .footer__number-link, .footer__nav-link, .house__text  {
     font-family: 'Radio Canada', sans-serif;
 }
 
@@ -429,9 +429,29 @@
     border-bottom: 1px solid rgb(228, 187, 51);
 }
 
-.char__wrap .nav, .char__section {
+.char__wrap .nav, .char__section, .houses__content, .house__content {
     background-color: rgba(243, 242, 196, 0.945);
     width: 80%;
+}
+
+.house__content {
+    padding: 2%;
+    display: flex;  
+    justify-content: space-between;
+}
+
+.houses__title, .houses__desc {
+    text-align: center;
+}
+
+.houses__title  {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 1%;
+}
+
+.houses__desc {
+    font-size: 16px;
 }
 
 .char__wrap .nav_wrap {
@@ -472,7 +492,7 @@
     margin-right: 0.5%;
 }
 
-.cart__img {
+.cart__img, .card__img-link {
     width: 100%;
     height: 100%;
     max-width: 200px;
@@ -495,4 +515,68 @@
     background-image: url(./img/search.png);
     background-repeat: no-repeat;
     background-position: center right 10px;
+}
+
+.char__wrap .main__link :hover {
+    transition: 1s;
+    transform: scale(1.2);
+}
+
+.house__card {
+    width: 30%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(232, 235, 98, 0.863);
+    border: 1px solid rgb(228, 187, 51);
+    height: 100%;
+}
+
+.house__card-img {
+    width: 95%;
+    max-width: 280px;
+    margin: 3%;
+}
+
+.house__desc {
+    width: 65%;
+}
+
+.house__carf-title {
+    font-size: 24px;
+    padding: 2%;
+    background-color: rgb(250, 198, 28);
+}
+
+.house__carf-title, .house__card-info {
+    font-weight: bold;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+.house__card-info {
+    font-size: 18px;
+    background-color: rgb(255, 215, 83);
+    padding: 1%;
+}
+
+.house__card-list {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+}
+
+.house__card-item {
+    width: 100%;    
+    display: flex;
+    padding: 2%;
+    justify-content: space-between;
+    font-family: 'Radio Canada', sans-serif;
+    border-bottom: 1px solid rgb(228, 187, 51);
+}
+
+.house__card-span {
+    font-weight: bold;
 }

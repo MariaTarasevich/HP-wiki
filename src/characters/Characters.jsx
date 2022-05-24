@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import { useEffect, useState } from "react"
 import { HeaderNav } from './../headerNav/HeaderNav'
 import { CharacterCard } from '../characterCard/CharacterCard'
+import { Context, charData } from "./../context/context"
 
 export const Characters = () => {
     const selectChar = useRef(null)
@@ -15,10 +16,14 @@ export const Characters = () => {
             .then(res => res.json())
             .then(json => {
                 console.log(json)
-                setCharactersList([...json])
+
+                localStorage.setItem('characters', JSON.stringify(json))
+                localStorage.getItem('characters') ? setCharactersList(JSON.parse(localStorage.getItem('characters'))) : setCharactersList([...json])
                 setDefCharactersList([...json])
             })
     }, [])
+
+
 
     const showHouse = (house) => {
         fetch('https://hp-api.herokuapp.com/api/characters/house/' + house)
@@ -70,6 +75,7 @@ export const Characters = () => {
     }
 
     return (
+        
         <div className='char__wrap'>
             <HeaderNav />
             <section className='char__section'>

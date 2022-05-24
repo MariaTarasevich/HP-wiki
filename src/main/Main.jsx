@@ -16,10 +16,10 @@ export const Main = () => {
                     </NavLink>
                     <div className='main__houses-container'>
                         <div className='main__houses-wrap'>
-                            <NavLink className='main__link' to='/'><img className='main__pic' src={gryf} /></NavLink>
-                            <NavLink className='main__link' to='/'><img className='main__pic' src={slyth} /></NavLink>
-                            <NavLink className='main__link' to='/'><img className='main__pic' src={huff} /></NavLink>
-                            <NavLink className='main__link' to='/'><img className='main__pic' src={rav} /></NavLink>
+                            <NavLink className='main__link' to='/gryffindor'><img className='main__pic' src={gryf} /></NavLink>
+                            <NavLink className='main__link' to='/slytherin'><img className='main__pic' src={slyth} /></NavLink>
+                            <NavLink className='main__link' to='/hufflepuff'><img className='main__pic' src={huff} /></NavLink>
+                            <NavLink className='main__link' to='/ravenclaw'><img className='main__pic' src={rav} /></NavLink>
                         </div>
                     </div>
                 </div>

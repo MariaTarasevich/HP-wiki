@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import loc from './../img/loc.png'
 import mail from './../img/mail.png'
 import telegram from './../img/telegram.png'

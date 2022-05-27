@@ -2,7 +2,6 @@ import React, { useRef } from 'react'
 import { useEffect, useState } from "react"
 import { HeaderNav } from './../headerNav/HeaderNav'
 import { CharacterCard } from '../characterCard/CharacterCard'
-import { Context, charData } from "./../context/context"
 
 export const Characters = () => {
     const selectChar = useRef(null)
@@ -26,18 +25,18 @@ export const Characters = () => {
 
     const showHouse = (house) => {
         fetch('https://hp-api.herokuapp.com/api/characters/house/' + house)
-        .then((res) => res.json())
-        .then((json) => {
-            setCharactersList([...json])
-        })
+            .then((res) => res.json())
+            .then((json) => {
+                setCharactersList([...json])
+            })
     }
 
-    const  showType = (type) => {
+    const showType = (type) => {
         fetch('https://hp-api.herokuapp.com/api/characters/' + type)
-        .then((res) => res.json())
-        .then((json) => {
-            setCharactersList([...json])
-        })
+            .then((res) => res.json())
+            .then((json) => {
+                setCharactersList([...json])
+            })
     }
 
     const selectShowResult = () => {
@@ -74,7 +73,7 @@ export const Characters = () => {
     }
 
     return (
-        
+
         <div className='char__wrap'>
             <HeaderNav />
             <section className='char__section'>
@@ -91,7 +90,7 @@ export const Characters = () => {
                     <input type='search' onChange={(e) => showSearchChar(e)} className='char__search-input' ref={searchChar} placeholder='Dobby' />
                 </div>
                 <div className='char__content'>
-                    {charactersList.length > 0 ? <>{charactersList.filter(({name}) => name.toLowerCase().includes(searchValue.toLowerCase())).map((character, index) => {
+                    {charactersList.length > 0 ? <>{charactersList.filter(({ name }) => name.toLowerCase().includes(searchValue.toLowerCase())).map((character, index) => {
                         return (<CharacterCard key={index} character={character} />)
                     })}</> : <h3>Loading.....</h3>}
                 </div>

@@ -17,17 +17,8 @@ import { addToFav, getFavList, deleteFromFav } from './utils/utils'
 
 function App() {
   const favChars = getFavList();
-  const [ favList, setFavList ] = useState(favChars)
-  ///////const [cart, setCart] = useState(favList);
-  // let charData
-  // let getCharData = () => {
-  //   fetch('https://hp-api.herokuapp.com/api/characters')
-  //     .then((res) => res.json())
-  //     .then((json) => {
-  //       charData = [...json]
-  //     })
-  //   return charData
-  // }
+  const [favList, setFavList] = useState(favChars)
+
   return (
     <Context.Provider value={{ addToFav, favList, deleteFromFav }}>
       <div className="App">

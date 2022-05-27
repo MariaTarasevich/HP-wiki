@@ -585,6 +585,10 @@
     border-bottom: 1px solid rgb(228, 187, 51);
 }
 
+.fav__name, .fav__house, .fav__actor{
+    font-size: 22px;
+}
+
 .charpage__desc h3 {
     font-weight: bold;
     display: flex;
@@ -632,11 +636,20 @@
     border: 1px solid rgba(228, 187, 51, 0.336);
 }
 
+.fav_items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 .fav__item {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-height: 200px;
+    max-width: 900px;
     padding: 1% 5% 1% 5%;
     background-color: rgba(236, 208, 116, 0.863);
     border-radius: 15px;
@@ -653,6 +666,7 @@
 .hat__restart-btn {
     font-size: 16px;
     margin-top: 10%;
+    cursor: pointer;
 }
 
 .hat {
@@ -678,7 +692,7 @@
 
 .hat__img:hover {
     transition: 0.5s;
-    transform: scale(1.2);
+    transform: scale(1.1);
     cursor: pointer;
 }
 .hat__res-wrap, .hat__chosen {
@@ -691,4 +705,243 @@
     font-size: 28px;
     font-weight: bold;
     color: #d17409;
+}
+
+@media (max-width: 1024px) {
+    .footer__bot-right {
+        width: 185%;
+    }
+}
+
+@media (max-width: 768px) {
+    .main__houses-wrap {
+        width: 78%;
+    }
+
+    .main__title-pic {
+        display: flex;
+        justify-content: center;
+    }
+
+    .main__title-pic img {
+        width: 80%;
+    }
+
+    .nav__links-wrap {
+        width: 58%;
+    }
+
+    .home__promo-subtitle {
+        padding-left: 2%;
+        padding-right: 2%;
+        text-align: center;
+    }
+
+    .info__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .info__item {
+        width: 300px;
+    }
+
+    .footer__top-left {
+        width: 47%;
+    }
+
+    .footer__top-right {
+        width: 50%;
+    }
+
+    .footer__bot {
+        padding-top: 4%;
+        flex-direction: column-reverse;
+    }
+
+    .footer__bot-right {
+        width: 80%;
+        justify-content: space-between;
+        margin-bottom: 5%;
+    }
+
+    .home__promo-pic {
+        width: 100%;
+    }
+    
+    .houses__title {
+        font-size: 22px;
+    }
+
+    .houses__desc {
+        font-size: 14px;
+    }
+
+    .hat__img-house, .hat__img {
+        max-height: 359px;
+    }   
+}
+
+@media (max-width: 425px) {
+    .info__title {
+        text-align: center;
+    }
+
+    .footer__top {
+        flex-direction: column;
+    }
+
+    .footer__top-left, .footer__top-right {
+        width: 100%;
+    }
+
+    .footer__top-left {
+        margin-bottom: 5%;
+    }
+
+    .footer__bot-right {
+        width: 100%;
+    }
+
+    .footer__nav-link {
+        font-size: 14px;
+    }
+
+    .footer__bot-left {
+        height: 13em;
+    }
+
+    .nav_wrap {
+        flex-wrap: wrap;
+        margin-bottom: 4%;
+        height: 7em;
+    }
+
+    .nav__hat-wrap, .nav__links-wrap {
+        width: 100%;
+    }
+
+    .nav__hat-wrap {
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav_link {
+        font-size: 12px;
+    }
+
+    .nav {
+        padding: 0;
+    }
+
+    .home__promo-wrap {
+        width: 92%;
+    }
+
+    .card__item {
+        width: 44%;
+    }
+
+    .main__pic {
+        width: 58%;
+    }
+    
+    .house__content {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .house__card {
+        width: 97%;
+    }
+
+    .house__desc {
+        width: 100%;
+    }
+
+    .hat__img-house, .hat__img {
+        max-height: 244px;
+    }
+
+    .hat__congrats {
+        text-align: center;
+    }
+
+    .hat__restart-btn {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 375px) {
+    .info__title {
+        font-size: 24px;
+    }
+
+    .info__subtitle {
+        font-size: 19px;
+    }
+
+    .wizards__content {
+        width: 87%;
+    }
+
+    .footer__bot-right {
+        flex-wrap: wrap;
+    }
+
+    .char__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .char__select {
+        margin-bottom: 10%;
+    }
+
+    .card__name {
+        font-size: 11px;
+    }
+
+    .houses__desc {
+        font-size: 12px;
+    }
+
+    .main__pic {
+        width: 64%;
+    }
+
+    .main__houses-container {
+        padding-bottom: 3em;
+    }
+
+    .hat__title {
+        text-align: center; 
+    }
+}
+
+@media (max-width: 320px) {
+    .nav_wrap {
+        width: 90%;
+    }
+
+    .info__item {
+        width: 283px;
+    }
+
+    .accordion__content {
+        width: 90%;
+    }
+
+    .footer__soc {
+        width: 3em;
+    }
+
+    .card__item {
+        width: 80%;
+    }
+
+    .hat__img-house, .hat__img {
+        max-height: 199px;
+    }
 }

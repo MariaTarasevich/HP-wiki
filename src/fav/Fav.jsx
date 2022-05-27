@@ -13,9 +13,9 @@ export const Fav = () => {
                         <div className="fav__item">
                             <img src={image} alt="character" className="fav__img"/>
                             <div className="card__desc">
-                                <h3 className="card__name">{name}</h3>
-                                <p className="card__house">{house}</p>
-                                <p className="card__actor">PLayed by {actor}</p>
+                                <h3 className="fav__name">{name}</h3>
+                                <p className="fav__house">{house}</p>
+                                <p className="fav__actor">PLayed by {actor}</p>
                             </div>
                         </div>
                     </div>

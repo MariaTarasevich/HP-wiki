@@ -47,7 +47,7 @@ export const Hat = () => {
                             {house == 'Hufflepuff' ? 
                             <div className='hat__res-wrap'><h3 className='hat__congrats'>Congratulations! Your House is Hufflepuff!</h3><img src={huff} className="hat__img-house"/></div> 
                         : <div className='hat__res-wrap'><h3 className='hat__congrats'>Congratulations! Your House is Ravenclaw!</h3><img src={rav} className="hat__img-house"/></div>}</div>}<button className='hat__restart-btn' onClick={()=>setChosen(false)}>Try again</button></div> 
-                : <div className='hat__wrap'><img src={sortHat} onClick={() => { getRandom(); setChosen(true); console.log(house) }} className="hat__img"/></div>}
+                : <div className='hat__wrap'><img src={sortHat} onClick={() => { getRandom(); setChosen(true) }} className="hat__img"/></div>}
             </div>
         </div>
     )

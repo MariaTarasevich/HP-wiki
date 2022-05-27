@@ -9,3 +9,6 @@
 // }
 
 // export const Context = React.createContext(charData);
+import { createContext } from "react";
+
+export const Context = createContext();

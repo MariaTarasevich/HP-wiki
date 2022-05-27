@@ -266,7 +266,7 @@
     margin-bottom: 2em;
 }
 
-.wizards__btn {
+.wizards__btn, .hat__restart-btn {
     text-decoration: none;
     color: #fff;
     background-color: #F36A17;
@@ -414,6 +414,7 @@
 
 .card__add {
     width: 20px;
+    cursor: pointer;
 }
 
 .char__wrap {
@@ -429,7 +430,7 @@
     border-bottom: 1px solid rgb(228, 187, 51);
 }
 
-.char__wrap .nav, .char__section, .houses__content, .house__content {
+.char__wrap .nav, .char__section, .houses__content, .house__content, .charpage, .fav, .hat {
     background-color: rgba(243, 242, 196, 0.945);
     width: 80%;
 }
@@ -522,15 +523,23 @@
     transform: scale(1.2);
 }
 
-.house__card {
-    width: 30%;
-    max-width: 300px;
+.house__card, .charpage__desc {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgba(232, 235, 98, 0.863);
     border: 1px solid rgb(228, 187, 51);
     height: 100%;
+}
+
+.house__card {
+    width: 30%;
+    max-width: 300px;
+}
+
+.charpage__desc {
+    width: 50%;
+    max-width: 400px;
 }
 
 .house__card-img {
@@ -568,15 +577,118 @@
     margin: 0;
 }
 
-.house__card-item {
+.house__card-item, .charpage__desc h3, .charpage__desc p {
     width: 100%;    
     display: flex;
     padding: 2%;
-    justify-content: space-between;
     font-family: 'Radio Canada', sans-serif;
     border-bottom: 1px solid rgb(228, 187, 51);
 }
 
+.charpage__desc h3 {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.card__name {
+    font-size: 22px;
+}
+
+.house__card-item {
+    justify-content: space-between;
+}
+
+.charpage__desc p{
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__wand {
+    width: 100%;
+}
+
 .house__card-span {
     font-weight: bold;
+}
+
+.charpage, .fav {
+    padding: 2%;
+}
+
+.charpage__item {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.charpage__img {
+    height: 100%;
+    width: 20%;
+    max-width: 400px;
+    max-height: 700px;
+    border-radius: 15px;
+    border: 1px solid rgba(228, 187, 51, 0.336);
+}
+
+.fav__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 200px;
+    padding: 1% 5% 1% 5%;
+    background-color: rgba(236, 208, 116, 0.863);
+    border-radius: 15px;
+    border: 1px solid rgba(228, 187, 51, 0.336);
+}
+
+.fav__img {
+    max-width: 100px;
+    height: 100%;
+    border-radius: 15px;
+    margin-right: 5%;
+}
+
+.hat__restart-btn {
+    font-size: 16px;
+    margin-top: 10%;
+}
+
+.hat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5%;
+}
+
+.hat__title {
+    font-size: 28px;
+    font-weight: bold;
+    padding-top: 4%;
+}
+
+.hat__img {
+    max-width: 500px;
+}
+
+.hat__img-house {
+    max-height: 500px;
+}
+
+.hat__img:hover {
+    transition: 0.5s;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.hat__res-wrap, .hat__chosen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hat__congrats {
+    font-size: 28px;
+    font-weight: bold;
+    color: #d17409;
 }

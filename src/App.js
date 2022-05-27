@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import { Main } from './main/Main'
@@ -13,35 +13,39 @@ import { Hat } from './hat/Hat'
 import { Fav } from './fav/Fav'
 import { CharacterPage } from './characterPage/CharacterPage'
 import { Context } from './context/context'
+import { addToFav, getFavList, deleteFromFav } from './utils/utils'
 
 function App() {
-  //const { a } = useContext(Context
-  let charData
-   let getCharData = () => {
-    fetch('https://hp-api.herokuapp.com/api/characters')
-    .then((res) => res.json())
-    .then((json) => {
-        charData = [...json]
-    })
-    return charData
-}
+  const favChars = getFavList();
+  const [ favList, setFavList ] = useState(favChars)
+  ///////const [cart, setCart] = useState(favList);
+  // let charData
+  // let getCharData = () => {
+  //   fetch('https://hp-api.herokuapp.com/api/characters')
+  //     .then((res) => res.json())
+  //     .then((json) => {
+  //       charData = [...json]
+  //     })
+  //   return charData
+  // }
   return (
-
-    <div className="App"> 
-      <Routes>
-      <Route path="/" element={<Main />} />
-      <Route path="/home" element={<Home />} />
-      <Route path="/characters" element={<Characters />} />
-      <Route path="/houses" element={<Houses />} />
-      <Route path="/hat" element={<Hat />} />
-      <Route path="/gryffindor" element={<Gryffindor />} />
-      <Route path="/slytherin" element={<Slytherin />} />
-      <Route path="/hufflepuff" element={<Hufflepuff />} />
-      <Route path="/ravenclaw" element={<Ravenclaw />} />
-      <Route path="/fav" element={<Fav />} />
-      <Route path='/characters/:name' element={<CharacterPage />} />
-      </Routes>
-    </div>
+    <Context.Provider value={{ addToFav, favList, deleteFromFav }}>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/characters" element={<Characters />} />
+          <Route path="/houses" element={<Houses />} />
+          <Route path="/hat" element={<Hat />} />
+          <Route path="/gryffindor" element={<Gryffindor />} />
+          <Route path="/slytherin" element={<Slytherin />} />
+          <Route path="/hufflepuff" element={<Hufflepuff />} />
+          <Route path="/ravenclaw" element={<Ravenclaw />} />
+          <Route path="/fav" element={<Fav />} />
+          <Route path='/characters/:name' element={<CharacterPage />} />
+        </Routes>
+      </div>
+    </Context.Provider>
   );
 }
 

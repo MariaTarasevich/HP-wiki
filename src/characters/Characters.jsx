@@ -15,7 +15,6 @@ export const Characters = () => {
         fetch(`https://hp-api.herokuapp.com/api/characters`)
             .then(res => res.json())
             .then(json => {
-                console.log(json)
 
                 localStorage.setItem('characters', JSON.stringify(json))
                 localStorage.getItem('characters') ? setCharactersList(JSON.parse(localStorage.getItem('characters'))) : setCharactersList([...json])
@@ -23,7 +22,7 @@ export const Characters = () => {
             })
     }, [])
 
-
+    console.log(JSON.parse(localStorage.getItem('favList')))
 
     const showHouse = (house) => {
         fetch('https://hp-api.herokuapp.com/api/characters/house/' + house)
